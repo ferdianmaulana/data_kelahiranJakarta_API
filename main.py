@@ -11,9 +11,9 @@ import json
 
 app = FastAPI()
 
-df2019 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/master/data_kelahiran_jakarta2019.csv')
-df2018 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/master/data_kelahiran_jakarta2018.csv')
-df2017 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/master/data_kelahiran_jakarta2017.csv')
+df2019 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/main/data_kelahiran_jakarta2019.csv')
+df2018 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/main/data_kelahiran_jakarta2018.csv')
+df2017 = pd.read_csv('https://raw.githubusercontent.com/ferdianmaulana/data_kelahiranJakarta_API/main/data_kelahiran_jakarta2017.csv')
 df = pd.DataFrame(df2019).append(df2018).append(df2017)
 
 @app.get("/")
